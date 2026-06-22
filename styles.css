@@ -168,6 +168,59 @@ nav {
   text-decoration: none;
 }
 
+.btn__menu {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 32px;
+  color: #243e63;
+  z-index: 101;
+}
+
+.menu__backdrop {
+  position: fixed;
+  top: 24px;
+  left: 24px;
+  right: 24px;
+  bottom: 24px;
+  background-color: #fff;
+  border-radius: 8px;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 300ms ease;
+}
+
+.menu--open .menu__backdrop {
+  visibility: visible;
+  opacity: 1;
+}
+
+.menu__links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.menu__list {
+  padding: 16px 0;
+}
+
+.menu__link {
+  font-size: 24px;
+  color: #243e63;
+  font-weight: 700;
+}
+
+.btn__menu--close {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+}
+
 /* LANDING */
 
 #landing {
@@ -190,7 +243,7 @@ header {
 }
 
 .header__description {
-  width: 42%;
+  width: 40%;
 }
 
 h1 {
@@ -220,7 +273,7 @@ h1 {
   margin-bottom: 80px;
 }
 
-.header__email input {
+.header__email--input {
   flex: 1;
   border: none;
   outline: none;
@@ -229,12 +282,12 @@ h1 {
   color: #243e63;
 }
 
-.header__email input::placeholder {
+.header__email--input::placeholder {
   color: #a0aec0;
   font-weight: 500;
 }
 
-.header__email button {
+.header__email--btn {
   background-color: #6415ff;
   color: #fff;
   border: none;
@@ -258,7 +311,7 @@ h1 {
 }
 
 .header__img--wrapper {
-  width: 58%;
+  width: 60%;
 }
 
 /* FEATURES */
@@ -372,12 +425,13 @@ h1 {
 .plans {
   width: 100%;
   display: flex;
+  flex-wrap: wrap;
   gap: 32px;
   margin-top: 48px;
 }
 
 .plan {
-  width: calc(100% / 3);
+  width: calc((100% - 64px) / 3);
   border: 1px solid #e2e8f0;
   border-radius: 8px;
   padding: 48px 32px;
@@ -385,6 +439,8 @@ h1 {
   position: relative;
   overflow: hidden;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
 }
 
 .plan::before {
@@ -531,6 +587,8 @@ footer {
 .footer__columns div {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  width: calc(100% / 5);
 }
 
 .footer__columns h4 {
@@ -577,6 +635,14 @@ footer {
 /* TABLETS */
 
 @media (max-width: 1024px) {
+  .nav__links {
+    display: none;
+  }
+
+  .btn__menu {
+    display: block;
+  }
+
   .header__container,
   .two__column {
     flex-direction: column;
@@ -594,6 +660,32 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+
+  .header__email {
+    max-width: 512px;
+    height: auto;
+    border: none;
+    border-radius: 0;
+    padding: 0;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .header__email--input {
+    width: 100%;
+    height: 80px;
+    border: 2px solid #e2e8f0;
+    border-radius: 999px;
+    text-align: center;
+    padding: 0 32px;
+  }
+
+  .header__email--btn {
+    width: 100%;
+    height: 80px;
+    padding: 0;
+    font-size: 20px;
   }
 
   .section__text {
@@ -634,33 +726,12 @@ footer {
 /* PHONES */
 
 @media (max-width: 768px) {
-  .nav__links {
-    display: none;
-  }
-
   h1 {
     font-size: 36px;
   }
 
   .section__title {
     font-size: 36px;
-  }
-
-  .header__email {
-    flex-direction: column;
-    height: auto;
-    border-radius: 24px;
-    padding: 12px;
-  }
-
-  .header__email input {
-    width: 100%;
-    padding: 16px;
-    text-align: center;
-  }
-
-  .header__email button {
-    width: 100%;
   }
 
   .feature {
