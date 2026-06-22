@@ -25,35 +25,21 @@
           <li><a href="#" class="nav__link nav__link--login">Login</a></li>
           <li><a href="#" class="nav__link nav__link--primary">Sign Up</a></li>
         </ul>
-        <button class="btn__menu" onclick="openMenu()">
-  ☰
-  <div class="menu__backdrop">
-  <button
-    class="btn__menu btn__menu--close"
-    onclick="closeMenu()"
-  >
-    ✕
-  </button>
 
-  <ul class="menu__links">
-    <li class="menu__list">
-      <a href="#" class="menu__link">About</a>
-    </li>
+        <button class="btn__menu" onclick="openMenu()">☰</button>
 
-    <li class="menu__list">
-      <a href="#" class="menu__link">Blog</a>
-    </li>
+        <div class="menu__backdrop">
+          <button class="btn__menu btn__menu--close" onclick="closeMenu()">✕</button>
 
-    <li class="menu__list">
-      <a href="#" class="menu__link">Pricing</a>
-    </li>
-
-    <li class="menu__list">
-      <a href="#" class="menu__link">Contact Us</a>
-    </li>
-  </ul>
-</div>
-</button>
+          <ul class="menu__links">
+            <li class="menu__list"><a href="#features" class="menu__link" onclick="closeMenu()">About</a></li>
+            <li class="menu__list"><a href="#blog" class="menu__link" onclick="closeMenu()">Blog</a></li>
+            <li class="menu__list"><a href="#pricing" class="menu__link" onclick="closeMenu()">Pricing</a></li>
+            <li class="menu__list"><a href="#contact" class="menu__link" onclick="closeMenu()">Contact Us</a></li>
+            <li class="menu__list"><a href="#" class="menu__link" onclick="closeMenu()">Login</a></li>
+            <li class="menu__list"><a href="#" class="menu__link" onclick="closeMenu()">Sign Up</a></li>
+          </ul>
+        </div>
       </div>
     </nav>
 
@@ -66,19 +52,16 @@
           </p>
 
           <form class="header__email">
-  <input
-    type="email"
-    class="header__email--input"
-    placeholder="Your E-mail Address"
-  />
+            <input
+              type="email"
+              class="header__email--input"
+              placeholder="Your E-mail Address"
+            />
 
-  <button
-    type="submit"
-    class="header__email--btn"
-  >
-    Get Started
-  </button>
-</form>
+            <button type="submit" class="header__email--btn">
+              Get Started
+            </button>
+          </form>
 
           <p class="customers__title">OUR TRUSTED CUSTOMERS</p>
           <img src="./assets/customers-logo-strip.680ac7c2e8ae28161d2c.png" alt="Customer logos" class="customers__img">
