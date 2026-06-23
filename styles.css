@@ -38,7 +38,7 @@ ul {
 }
 
 .container {
-  padding: 96px 32px;
+  padding: 80px 32px;
 }
 
 .row {
@@ -172,7 +172,7 @@ nav {
   display: none;
   background: none;
   border: none;
-  font-size: 32px;
+  font-size: 24px;
   color: #243e63;
   z-index: 101;
 }
@@ -228,7 +228,7 @@ nav {
 }
 
 header {
-  padding: 64px 0 96px;
+  padding: 64px 0 80px;
 }
 
 .header__container {
@@ -641,6 +641,15 @@ footer {
 
   .btn__menu {
     display: block;
+    font-size: 24px;
+  }
+
+  .logo__wrapper {
+    font-size: 24px;
+  }
+
+  .logo {
+    width: 40px;
   }
 
   .header__container,
@@ -662,30 +671,44 @@ footer {
     align-items: center;
   }
 
+  h1 {
+    font-size: 36px;
+    line-height: 1.25;
+    margin-bottom: 28px;
+  }
+
+  .header__para {
+    font-size: 18px;
+    line-height: 1.5;
+    max-width: 672px;
+  }
+
   .header__email {
-    max-width: 512px;
+    max-width: 608px;
     height: auto;
     border: none;
     border-radius: 0;
     padding: 0;
     flex-direction: column;
     gap: 24px;
+    margin-bottom: 64px;
   }
 
   .header__email--input {
     width: 100%;
-    height: 80px;
+    height: 64px;
     border: 2px solid #e2e8f0;
     border-radius: 999px;
     text-align: center;
     padding: 0 32px;
+    font-size: 16px;
   }
 
   .header__email--btn {
     width: 100%;
-    height: 80px;
+    height: 64px;
     padding: 0;
-    font-size: 20px;
+    font-size: 16px;
   }
 
   .section__text {
@@ -694,12 +717,36 @@ footer {
     align-items: center;
   }
 
-  .values {
-    text-align: left;
+  .features {
+    flex-direction: column;
+    align-items: center;
   }
 
   .feature {
-    width: 50%;
+    width: 100%;
+    max-width: 480px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 40px 24px;
+  }
+
+  .feature__icon {
+    margin-right: 0;
+    margin-bottom: 24px;
+  }
+
+  .feature h3 {
+    font-size: 24px;
+  }
+
+  .feature p {
+    font-size: 18px;
+    line-height: 1.75;
+  }
+
+  .values {
+    text-align: left;
   }
 
   .plans {
@@ -732,10 +779,6 @@ footer {
 
   .section__title {
     font-size: 36px;
-  }
-
-  .feature {
-    width: 100%;
   }
 
   .values {
