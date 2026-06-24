@@ -534,6 +534,37 @@ h1 {
   color: #fff;
 }
 
+.plan__features {
+  border-top: 1px solid #e2e8f0;
+  border-bottom: 1px solid #e2e8f0;
+  padding: 32px 0;
+  margin: 32px -32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.plan__features h4 {
+  font-size: 20px;
+  color: #1a202c;
+  margin-bottom: 20px;
+}
+
+.plan__features span {
+  color: #718096;
+  font-size: 16px;
+  margin-bottom: 16px;
+}
+
+.plan--featured .plan__features {
+  border-color: rgba(255, 255, 255, 0.25);
+}
+
+.plan--featured .plan__features h4,
+.plan--featured .plan__features span {
+  color: #fff;
+}
+
 .btn--light {
   background-color: #fff;
   color: #6415ff;
