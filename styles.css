@@ -396,6 +396,17 @@ h1 {
   max-width: 320px;
 }
 
+#steps .step {
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+# steps .step span {
+  margin-right: 0;
+  margin-bottom: 8px;
+}
+
 /* VALUES */
 
 .values {
@@ -767,6 +778,18 @@ footer {
     flex-direction: column;
     text-align: center;
     padding: 64px 32px;
+  }
+
+  #quality .section__img--wrapper img, 
+  #steps .section__img--wrapper img,
+  #values .section__img--wrapper img, {
+     order: -1;
+  }
+  
+  #quality .section__text, 
+  #steps .section__text, 
+  #values .section__text {
+    order: 1;
   }
 }
 
