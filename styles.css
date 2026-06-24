@@ -402,7 +402,7 @@ h1 {
   text-align: center;
 }
 
-# steps .step span {
+#steps .step span {
   margin-right: 0;
   margin-bottom: 8px;
 }
@@ -429,6 +429,41 @@ h1 {
 .value p {
   color: #718096;
   line-height: 1.625;
+}
+
+.value__title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.value__img--wrapper {
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 12px;
+}
+
+.value__img--wrapper-green {
+  background-color: #9ae6b4;
+}
+
+.value__img--wrapper-red {
+  background-color: #feb2b2;
+}
+
+.value__icon {
+  font-size: 24px;
+  font-weight: 500;
+  color: #276749;
+}
+
+.value__img--wrapper-red .value__icon {
+  color: #9b2c2c;
 }
 
 /* PRICING */
@@ -757,7 +792,26 @@ footer {
   }
 
   .values {
-    text-align: left;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .value {
+    width: 100%;
+    max-width: 420px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .value p {
+    text-align: center;
+    max-width: 360px;
+  }
+
+  .value__title {
+    justify-content: center;
   }
 
   .plans {
