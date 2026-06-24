@@ -836,7 +836,7 @@ footer {
 
   #quality .section__img--wrapper img, 
   #steps .section__img--wrapper img,
-  #values .section__img--wrapper img, {
+  #values .section__img--wrapper img {
      order: -1;
   }
   
