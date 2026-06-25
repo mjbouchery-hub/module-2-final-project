@@ -576,9 +576,21 @@ h1 {
 
 /* TESTIMONIALS */
 
+.testimonial {
+  width: 100%;
+  max-width: 640px;
+}
+
+.testimonial__rating {
+  color: #f6ad55;
+  font-size: 20px;
+  margin-bottom: 16px;
+}
+
 .testimonial h3 {
   font-size: 20px;
   margin-bottom: 16px;
+  color: #243e63;
 }
 
 .testimonial > p {
@@ -587,9 +599,17 @@ h1 {
   margin-bottom: 32px;
 }
 
+.testimonial__bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
 .testimonial__person {
   display: flex;
   align-items: center;
+  text-align: left;
 }
 
 .testimonial__person img {
@@ -597,6 +617,7 @@ h1 {
   height: 80px;
   border-radius: 999px;
   margin-right: 24px;
+  object-fit: cover;
 }
 
 .testimonial__person h4 {
@@ -606,6 +627,29 @@ h1 {
 
 .testimonial__person p {
   color: #7c8ba1;
+}
+
+.testimonial__buttons {
+  display: flex;
+  align-items: center;
+}
+
+.testimonial__button {
+  width: 48px;
+  height: 48px;
+  border: none;
+  border-radius: 999px;
+  color: #6415ff;
+  font-size: 24px;
+  font-weight: 700;
+  background-color: #edf2f7;
+}
+
+.testimonial__divider {
+  width: 1px;
+  height: 24px;
+  background-color: #e2e8f0;
+  margin: 0 12px;
 }
 
 /* CTA */
@@ -621,10 +665,16 @@ h1 {
   gap: 48px;
 }
 
+.cta__buttons {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
 .cta__box h2 {
   font-size: 30px;
   line-height: 1.5;
-  max-width: 520px;
+  max-width: 640px;
 }
 
 .btn--cta {
@@ -644,6 +694,11 @@ h1 {
 .btn--outline:hover {
   background-color: #fff;
   color: #6415ff;
+}
+
+#cta .container {
+  padding-left: 64px;
+  padding-right: 64px;
 }
 
 /* FOOTER */
@@ -862,7 +917,7 @@ footer {
   .cta__box {
     flex-direction: column;
     text-align: center;
-    padding: 64px 32px;
+    padding: 64px 48px;
   }
 
   #quality .section__img--wrapper img, 
@@ -876,6 +931,43 @@ footer {
   #values .section__text {
     order: 1;
   }
+
+    .testimonial {
+    max-width: 640px;
+    text-align: center;
+  }
+
+  .testimonial__bottom {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+  }
+
+  .testimonial__person {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .testimonial__person img {
+    margin-right: 0;
+    margin-bottom: 16px;
+  }
+
+  #cta .container {
+    padding-left: 48px;
+    padding-right: 48px;
+  }
+
+  .cta__buttons {
+  flex-direction: column;
+  gap: 24px;
+}
+
+.btn--cta {
+  margin-right: 0;
+}
 }
 
 /* PHONES */
