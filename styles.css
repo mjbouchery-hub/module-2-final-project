@@ -764,6 +764,28 @@ footer {
   color: #cbd5e0;
 }
 
+.footer__socials {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.footer__social--link {
+  width: 32px;
+  height: 32px;
+  background-color: #fff;
+  color: #1a202c;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer__social--link svg {
+  width: 16px;
+  height: 16px;
+}
+
 /* TABLETS */
 
 @media (max-width: 1024px) {
@@ -990,12 +1012,12 @@ footer {
   }
 
   .footer__columns {
-    flex-wrap: wrap;
-  }
+  flex-wrap: nowrap;
+}
 
   .footer__columns div {
-    width: calc(50% - 16px);
-  }
+  width: calc(100% / 5);
+}
 
   .footer__bottom {
     flex-direction: column;
