@@ -519,6 +519,19 @@ h1 {
   flex-wrap: wrap;
   gap: 32px;
   margin-top: 48px;
+  position: relative;
+}
+
+.plans__blob {
+  z-index: 0;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transform: translateX(-65%) translateY(40%) scaleX(1) scaleY(1);
+  height: 220px;
+  width: 220px;
+  opacity: 0.20;
+  pointer-events: none;
 }
 
 .plan {
@@ -528,6 +541,7 @@ h1 {
   padding: 48px 32px;
   text-align: center;
   position: relative;
+  z-index: 2;
   overflow: hidden;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.05);
   display: flex;
@@ -617,6 +631,20 @@ h1 {
 
 .btn--light:hover {
   background-color: #edf2f7;
+}
+
+.plan:nth-child(1)::before,
+.plan:nth-child(1) .btn {
+  background: linear-gradient(115deg, rgb(56, 178, 172) 0%, rgb(129, 230, 217) 100%);
+}
+
+.plan:nth-child(2) {
+  background: linear-gradient(135deg, rgb(76, 81, 191) 0%, rgb(102, 126, 234) 100%);
+}
+
+.plan:nth-child(3)::before,
+.plan:nth-child(3) .btn {
+  background: linear-gradient(115deg, rgb(245, 101, 101) 0%, rgb(254, 178, 178) 100%);
 }
 
 /* TESTIMONIALS */
