@@ -407,8 +407,7 @@ h1 {
   z-index: 1;
 }
 
-#quality .section__img--wrapper img,
-#steps .section__img--wrapper img {
+#quality .section__img--wrapper img {
   border: 1px solid #e2e8f0;
   border-radius: 4px;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
@@ -721,7 +720,7 @@ h1 {
 .testimonial__divider {
   width: 1px;
   height: 24px;
-  background-color: #e2e8f0;
+  background-color: #edf2f7;
   margin: 0 12px;
 }
 
@@ -736,6 +735,8 @@ h1 {
   align-items: center;
   justify-content: space-between;
   gap: 48px;
+  position: relative;
+  overflow: hidden;
 }
 
 .cta__buttons {
@@ -743,6 +744,33 @@ h1 {
   align-items: center;
   gap: 24px;
 }
+.cta__box h2,
+.cta__buttons {
+  position: relative;
+  z-index: 2;
+}
+
+.cta__blob {
+  position: absolute;
+  width: 320px;
+  height: 320px;
+  opacity: 0.5;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.cta__blob--1 {
+  left: 0;
+  bottom: 0;
+  transform: translate(-80px, 120px);
+}
+
+.cta__blob--2 {
+  right: 0;
+  top: 0;
+  transform: translate(80px, -240px);
+}
+
 
 .cta__box h2 {
   font-size: 30px;
@@ -779,7 +807,35 @@ h1 {
 footer {
   background-color: #6415ff;
   color: #fff;
+  position: relative;
+  overflow: hidden;
 }
+footer .container {
+  position: relative;
+  z-index: 2;
+}
+
+.footer__blob {
+  position: absolute;
+  width: 320px;
+  height: 320px;
+  opacity: 0.5;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.footer__blob--1 {
+  top: 0;
+  left: 0;
+  transform: translate(-80px, -128px);
+}
+
+.footer__blob--2 {
+  bottom: 0;
+  right: 0;
+  transform: translate(128px, 192px);
+}
+
 
 .footer__columns {
   display: flex;
